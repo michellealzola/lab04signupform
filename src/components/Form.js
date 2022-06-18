@@ -6,7 +6,9 @@ class Form extends Component {
     
       this.state = {
          username: '',
-         password: '',         
+         email: '',
+         password: '',
+         confirm: ''         
       }
     }
 
@@ -16,33 +18,59 @@ class Form extends Component {
         })
     }
 
+    handleEmailChange = (event) =>{
+        this.setState({
+            email : event.target.value
+        })
+    }
+
     handlePasswordChange = (event) =>{
         this.setState({
             password : event.target.value
         })
     }
+
+    handleConfirmPasswordChange = (event) =>{
+        this.setState({
+            confirm : event.target.value
+        })
+    }
     
     handleSubmit = (event) =>{                   
         event.preventDefault();
-        
-        const userInList = users.find((user) => user.username === this.state.username);
 
-        if(userInList)
-        {
-            if(userInList.password !== this.state.password)
+        if(this.state.confirm !== this.state.password)
             {
-                alert('Incorrect Password');
+                alert('Passwords do not match');
             }
             else
             {
                 alert(`${this.state.username}
-                ${this.state.password}`);
+                ${this.state.email}
+                ${this.state.password}
+                ${this.state.confirm}`);
             }
-        }
-        else
-        {
-            alert('Incorrect User Name');
-        }
+
+
+        
+    //     const userInList = users.find((user) => user.username === this.state.username);
+
+    //     if(userInList)
+    //     {
+    //         if(userInList.password !== this.state.password)
+    //         {
+    //             alert('Incorrect Password');
+    //         }
+    //         else
+    //         {
+    //             alert(`${this.state.username}
+    //             ${this.state.password}`);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         alert('Incorrect User Name');
+    //     }
     }
     
   render() {
@@ -53,8 +81,16 @@ class Form extends Component {
                 <input type='text' value={this.state.username} onChange={this.handleUserNameChange}></input>
             </div>
             <div>
+                <label>Email </label>
+                <input type='email' value={this.state.email} onChange={this.handleEmailChange}></input>
+            </div>
+            <div>
                 <label>Password </label>
                 <input type='text' value={this.state.password} onChange={this.handlePasswordChange}></input>
+            </div>
+            <div>
+                <label>Confirm Password </label>
+                <input type='text' value={this.state.confirm} onChange={this.handleConfirmPasswordChange}></input>
             </div>
             <div className='btn'>
                 <button>Submit</button>
