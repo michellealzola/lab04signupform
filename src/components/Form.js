@@ -50,27 +50,6 @@ class Form extends Component {
                 ${this.state.password}
                 ${this.state.confirm}`);
             }
-
-
-        
-    //     const userInList = users.find((user) => user.username === this.state.username);
-
-    //     if(userInList)
-    //     {
-    //         if(userInList.password !== this.state.password)
-    //         {
-    //             alert('Incorrect Password');
-    //         }
-    //         else
-    //         {
-    //             alert(`${this.state.username}
-    //             ${this.state.password}`);
-    //         }
-    //     }
-    //     else
-    //     {
-    //         alert('Incorrect User Name');
-    //     }
     }
     
   render() {
