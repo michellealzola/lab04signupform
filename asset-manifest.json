@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/signinform/static/css/main.68cf103a.css",
+    "main.js": "/signinform/static/js/main.deb5e914.js",
+    "static/js/787.4c6523a3.chunk.js": "/signinform/static/js/787.4c6523a3.chunk.js",
+    "index.html": "/signinform/index.html",
+    "main.68cf103a.css.map": "/signinform/static/css/main.68cf103a.css.map",
+    "main.deb5e914.js.map": "/signinform/static/js/main.deb5e914.js.map",
+    "787.4c6523a3.chunk.js.map": "/signinform/static/js/787.4c6523a3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68cf103a.css",
+    "static/js/main.deb5e914.js"
+  ]
+}
